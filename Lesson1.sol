@@ -1,16 +1,18 @@
-//SPDX-License-Identifier:MIT
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.25;
 
-contract admin{
-    
-    address public owner;
+contract Admin{
 
-    constructor(){
-        owner = msg.sender;
+        address public  Owner;
+
+        constructor(){
+        Owner = msg.sender;
     }
 
-    modifier onlyowner{
-        require(owner == msg.sender, "Access for Owner only");
+     modifier onlyOwner { 
+        require (Owner == msg.sender, "Owner can access");
         _;
     }
+
+
 }
