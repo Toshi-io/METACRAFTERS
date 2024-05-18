@@ -1,19 +1,19 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-contract Fproject {
+contract Appointmentrate {
 
-    function required(uint _requiredvalue) public pure {
-        require(_requiredvalue != 30, "required error input cannot be 30");
+    function PrenupRate(uint _PrenupRate) public pure {
+        require(_PrenupRate == 3000, " My Pren-up rate was 3000");
     } 
 
-    function reverted(uint _revertvalue) public pure {
-        if (_revertvalue == 20) {
-            revert("revert error input cannot be 20");
+    function BirthdayRate(uint _BirthdayRate) public pure {
+        if (_BirthdayRate != 1500) {
+            revert("My Birthday rate was 1500");
         }
     }
     
-    function asserted(uint _assertvalue) public pure{
-        assert(_assertvalue != 10); 
+    function PhotoshootRate(uint _PhotoshootRate) public pure{
+        assert(_PhotoshootRate == 2000); 
     }
 }
